@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ignite.controller.AfficherCommandeFXMLController">
+   <children>
+      <VBox layoutX="9.0" layoutY="10.0" prefHeight="914.0" prefWidth="250.0" style="-fx-background-color: #3F2B63;">
+         <children>
+            <Button fx:id="btnaccueil" mnemonicParsing="false" onAction="#accueil" prefHeight="69.0" prefWidth="251.0" text="Accueil" textFill="#fcf9f9" />
+            <Button fx:id="btnconsultecommande" layoutX="10.0" layoutY="127.0" mnemonicParsing="false" onAction="#consultenseignant" prefHeight="69.0" prefWidth="249.0" text="Consulter Liste Des Commande" textFill="#fcf9f9" />
+            <Button fx:id="AjoutercommandeButton" mnemonicParsing="false" onAction="#Ajoutercommande" prefHeight="69.0" prefWidth="249.0" text="Ajouter Commande" textFill="#fcf9f9" />
+         </children>
+      </VBox>
+      <Pane fx:id="pane" layoutX="258.0" layoutY="68.0" prefHeight="129.0" prefWidth="1111.0" style="-fx-background-color: #7156D0;">
+         <children>
+            <Label fx:id="labelpath" layoutX="28.0" layoutY="14.0" text="/Home/Admin" textFill="#fffefe" />
+            <Label fx:id="labeltitle" layoutX="28.0" layoutY="31.0" prefHeight="35.0" prefWidth="144.0" text="Commande" textFill="#fcf9f9">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tableview" layoutX="273.0" layoutY="211.0" prefHeight="699.0" prefWidth="1080.0">
+         <columns>
+            <TableColumn fx:id="tid" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="tidproduit" prefWidth="75.0" text="idproduit" />
+            <TableColumn fx:id="tuser" prefWidth="75.0" text="user" />
+            <TableColumn fx:id="tdatecom" prefWidth="75.0" text="datecom" />
+            <TableColumn fx:id="tprixtotal" prefWidth="75.0" text="prixtotale" />
+            <TableColumn fx:id="tvalide" prefWidth="154.0" text="valide" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
