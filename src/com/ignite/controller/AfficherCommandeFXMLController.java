@@ -162,4 +162,13 @@ public class AfficherCommandeFXMLController implements Initializable {
 
     }
 
+    @FXML
+    private void statcommande(ActionEvent event) {
+        try {
+            Ignite.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/com/ignite/gui/statcommandeFXML.fxml"))));
+        } catch (IOException ex) {
+            Logger.getLogger(AfficherCommandeFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
 }
