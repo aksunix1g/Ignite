@@ -9,7 +9,7 @@ public class Commande {
 
 private int id;
 private int idproduit;
-private int user;
+private String user;
 private Date datecom;
 private Double prixtotale;
 private String valide;
@@ -39,11 +39,11 @@ private String valide;
         this.idproduit = idproduit;
     }
 
-    public int getUser() {
+    public String getUser() {
         return user;
     }
 
-    public void setUser(int user) {
+    public void setUser(String user) {
         this.user = user;
     }
 
@@ -74,7 +74,7 @@ private String valide;
     public Commande() {
     }
 
-    public Commande(int id, int idproduit, int user, Date datecom, double prixtotale, String valide) {
+    public Commande(int id, int idproduit, String user, Date datecom, double prixtotale, String valide) {
         this.id = id;
         this.idproduit = idproduit;
         this.user = user;
@@ -83,7 +83,7 @@ private String valide;
         this.valide = valide;
     }
 
-    public Commande(int idproduit, int user, Date datecom, double prixtotale, String valide) {
+    public Commande(int idproduit, String user, Date datecom, double prixtotale, String valide) {
         this.idproduit = idproduit;
         this.user = user;
         this.datecom = datecom;
@@ -96,7 +96,7 @@ private String valide;
         return "Commande{" + "id=" + id + ", idproduit=" + idproduit + ", user=" + user + ", datecom=" + datecom + ", prixtotale=" + prixtotale + ", valide=" + valide + '}';
     }
 
-    public Commande(int idproduit, int user, Double prixtotale) {
+    public Commande(int idproduit, String user, Double prixtotale) {
         this.idproduit = idproduit;
         this.user = user;
         this.prixtotale = prixtotale;

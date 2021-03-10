@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.ignite.controller.StatcommandeFXMLController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="583.0" prefWidth="1080.0">
+         <children>
+            <VBox layoutX="-5.0" prefHeight="580.0" prefWidth="215.0" style="-fx-background-color: #3f2b63;">
+               <children>
+                  <Pane prefHeight="77.0" prefWidth="203.0" style="-fx-background-color: #2A1C42;">
+                     <children>
+                        <Label layoutX="43.0" layoutY="12.0" text="Ignite" textFill="WHITE">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="Accueil" onAction="#ButtonAccuiel" prefHeight="67.0" prefWidth="199.0" text="Accueil" />
+                  <JFXButton fx:id="Commande" onAction="#ButtonCommande" prefHeight="67.0" prefWidth="199.0" text="Commande" />
+                  <JFXButton fx:id="Statistique" onAction="#ButtonStaistique" prefHeight="67.0" prefWidth="199.0" text="Statistique" />
+               </children>
+            </VBox>
+            <PieChart fx:id="piechart" layoutX="487.0" layoutY="348.0" prefHeight="234.0" prefWidth="313.0" />
+            <BarChart fx:id="barchart" layoutX="219.0" layoutY="111.0" prefHeight="264.0" prefWidth="876.0">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </BarChart>
+            <Pane fx:id="pnlStatus" layoutX="210.0" layoutY="11.0" prefHeight="98.0" prefWidth="888.0" style="-fx-background-color: #7156D0;">
+               <children>
+                  <Label fx:id="lblStatusMini" layoutX="32.0" layoutY="14.0" text="/Home/Commande/Statistique" textFill="#fcfcfc" />
+                  <Label fx:id="lblStatus" layoutX="23.0" layoutY="40.0" text="Statistique" textFill="#fffbfb">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

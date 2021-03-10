@@ -39,7 +39,7 @@ public class CommandeService implements ICommandeService<Commande> {
             PreparedStatement ps;
             ps = DataBase.getInstance().getConnection().prepareStatement(query);
             ps.setInt(1, commande.getIdproduit());
-            ps.setInt(2, commande.getUser());
+            ps.setString(2, commande.getUser());
             ps.setDate(3, commande.getDatecom());
             ps.setDouble(4, commande.getPrixtotale());
             ps.setString(5, commande.getValide());
@@ -88,7 +88,7 @@ public class CommandeService implements ICommandeService<Commande> {
             Commande c = new Commande();
             c.setId(rs.getInt("id"));
             c.setIdproduit(rs.getInt("idproduit"));
-            c.setUser(rs.getInt("user"));
+            c.setUser(rs.getString("user"));
             c.setDatecom(rs.getDate("datecom"));
             c.setValide(rs.getString("valide"));
             c.setPrixtotale(rs.getDouble("prixtotale"));

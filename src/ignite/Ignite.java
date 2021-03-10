@@ -27,7 +27,7 @@ public class Ignite extends Application {
         instance = this;
  
 
-  scene = new Scene(FXMLLoader.load(getClass().getResource("/com/ignite/gui/AjouterCommendeFXML.fxml")));
+  scene = new Scene(FXMLLoader.load(getClass().getResource("/com/ignite/gui/AfficherCommandeFXML.fxml")));
 
     }
 

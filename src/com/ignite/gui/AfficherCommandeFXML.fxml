@@ -20,7 +20,7 @@
       </VBox>
       <Pane fx:id="pane" layoutX="258.0" layoutY="68.0" prefHeight="129.0" prefWidth="1111.0" style="-fx-background-color: #7156D0;">
          <children>
-            <Label fx:id="labelpath" layoutX="28.0" layoutY="14.0" text="/Home/Admin" textFill="#fffefe" />
+            <Label fx:id="labelpath" layoutX="28.0" layoutY="14.0" text="/Home/Admin/CommandList" textFill="#fffefe" />
             <Label fx:id="labeltitle" layoutX="28.0" layoutY="31.0" prefHeight="35.0" prefWidth="144.0" text="Commande" textFill="#fcf9f9">
                <font>
                   <Font size="24.0" />
@@ -30,12 +30,12 @@
       </Pane>
       <TableView fx:id="tableview" layoutX="273.0" layoutY="211.0" prefHeight="699.0" prefWidth="1080.0">
          <columns>
-            <TableColumn fx:id="tid" prefWidth="75.0" text="id" />
-            <TableColumn fx:id="tidproduit" prefWidth="75.0" text="idproduit" />
-            <TableColumn fx:id="tuser" prefWidth="75.0" text="user" />
-            <TableColumn fx:id="tdatecom" prefWidth="75.0" text="datecom" />
-            <TableColumn fx:id="tprixtotal" prefWidth="75.0" text="prixtotale" />
-            <TableColumn fx:id="tvalide" prefWidth="154.0" text="valide" />
+            <TableColumn fx:id="tid" prefWidth="105.0" text="ID Commande" />
+            <TableColumn fx:id="tidproduit" prefWidth="85.0" text="ID Produit" />
+            <TableColumn fx:id="tuser" prefWidth="85.0" text="User Name" />
+            <TableColumn fx:id="tdatecom" prefWidth="72.0" text="Date Commande" />
+            <TableColumn fx:id="tprixtotal" minWidth="0.0" prefWidth="0.0" text="prixtotale" />
+            <TableColumn fx:id="tvalide" prefWidth="182.0" text="Valide/En cours" />
          </columns>
       </TableView>
    </children>

@@ -66,43 +66,43 @@ public class AfficherCommandeFXMLController implements Initializable {
     private TableColumn<Commande, String> tprixtotal;
     @FXML
     private TableColumn<Commande, String> tvalide;
-   CommandeService service_cmd=new CommandeService();
-     private Connection con;
+    CommandeService service_cmd = new CommandeService();
+    private Connection con;
     @FXML
     private Button AjoutercommandeButton;
+
     public AfficherCommandeFXMLController() {
         con = DataBase.getInstance().getConnection();
 
     }
-    ObservableList<Commande> list =FXCollections.observableArrayList();
+    ObservableList<Commande> list = FXCollections.observableArrayList();
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-              try {
-            for (Commande p:service_cmd.readAllCommande())
-            {
+        try {
+            for (Commande p : service_cmd.readAllCommande()) {
                 list.add(p);
-                
+
             }
-                 tid.setCellValueFactory(new PropertyValueFactory<>("id"));
-                   tdatecom.setCellValueFactory(new PropertyValueFactory<>("datecom"));
-                    
-                    tprixtotal.setCellValueFactory(new PropertyValueFactory<>("prixtotale"));
-                tuser.setCellValueFactory(new PropertyValueFactory<>("user"));
-                    tidproduit.setCellValueFactory(new PropertyValueFactory<>("idproduit"));
-                    tvalide.setCellValueFactory(new PropertyValueFactory<>("valide"));
+            tid.setCellValueFactory(new PropertyValueFactory<>("id"));
+            tdatecom.setCellValueFactory(new PropertyValueFactory<>("datecom"));
+
+            tprixtotal.setCellValueFactory(new PropertyValueFactory<>("prixtotale"));
+            tuser.setCellValueFactory(new PropertyValueFactory<>("user"));
+            tidproduit.setCellValueFactory(new PropertyValueFactory<>("idproduit"));
+            tvalide.setCellValueFactory(new PropertyValueFactory<>("valide"));
         } catch (SQLException ex) {
             Logger.getLogger(AfficherCommandeFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
-         TableColumn col_action2 = new TableColumn<>("supprimer");
+        TableColumn col_action2 = new TableColumn<>("supprimer");
         tableview.getColumns().add(col_action2);
 
         col_action2.setCellValueFactory(
-                new Callback<TableColumn.CellDataFeatures<Disposer.Record, Boolean>, 
-                ObservableValue<Boolean>>() {
+                new Callback<TableColumn.CellDataFeatures<Disposer.Record, Boolean>, ObservableValue<Boolean>>() {
 
             @Override
             public ObservableValue<Boolean> call(TableColumn.CellDataFeatures<Disposer.Record, Boolean> p) {
@@ -114,21 +114,18 @@ public class AfficherCommandeFXMLController implements Initializable {
         col_action2.setCellFactory(
                 new Callback<TableColumn<Disposer.Record, Boolean>, TableCell<Disposer.Record, Boolean>>() {
 
-    
-                    
-             @Override
+            @Override
             public TableCell<Disposer.Record, Boolean> call(TableColumn<Disposer.Record, Boolean> p) {
                 return new ButtonDeleteCommande();
             }
-        
-        }); 
-                                                 
+
+        });
+
         TableColumn col_action = new TableColumn<>("valider commande");
         tableview.getColumns().add(col_action);
-        
+
         col_action.setCellValueFactory(
-                new Callback<TableColumn.CellDataFeatures<Disposer.Record, Boolean>, 
-                ObservableValue<Boolean>>() {
+                new Callback<TableColumn.CellDataFeatures<Disposer.Record, Boolean>, ObservableValue<Boolean>>() {
 
             @Override
             public ObservableValue<Boolean> call(TableColumn.CellDataFeatures<Disposer.Record, Boolean> p) {
@@ -140,21 +137,19 @@ public class AfficherCommandeFXMLController implements Initializable {
         col_action.setCellFactory(
                 new Callback<TableColumn<Disposer.Record, Boolean>, TableCell<Disposer.Record, Boolean>>() {
 
-    
-                    
-             @Override
+            @Override
             public TableCell<Disposer.Record, Boolean> call(TableColumn<Disposer.Record, Boolean> p) {
                 return new ButtonValliderCommande();
             }
-        
-        });       
-                        tableview.setItems(list);
 
-    }    
+        });
+        tableview.setItems(list);
+
+    }
 
     @FXML
     private void accueil(ActionEvent event) {
-        
+
     }
 
     @FXML
@@ -163,8 +158,8 @@ public class AfficherCommandeFXMLController implements Initializable {
 
     @FXML
     private void Ajoutercommande(ActionEvent event) throws IOException {
-                                                           Ignite.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/com/ignite/gui/AjouterCommendeFXML.fxml"))));              
+        Ignite.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/com/ignite/gui/AjouterCommendeFXML.fxml"))));
 
     }
-    
+
 }
