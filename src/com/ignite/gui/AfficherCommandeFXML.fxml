@@ -15,7 +15,6 @@
          <children>
             <Button fx:id="btnaccueil" mnemonicParsing="false" onAction="#accueil" prefHeight="69.0" prefWidth="251.0" text="Accueil" textFill="#fcf9f9" />
             <Button fx:id="btnconsultecommande" layoutX="10.0" layoutY="127.0" mnemonicParsing="false" onAction="#consultenseignant" prefHeight="69.0" prefWidth="249.0" text="Consulter Liste Des Commande" textFill="#fcf9f9" />
-            <Button fx:id="AjoutercommandeButton" mnemonicParsing="false" onAction="#Ajoutercommande" prefHeight="69.0" prefWidth="249.0" text="Ajouter Commande" textFill="#fcf9f9" />
             <Button fx:id="statcommande" mnemonicParsing="false" onAction="#statcommande" prefHeight="69.0" prefWidth="249.0" text="Statistique" textFill="#fcf9f9" />
          </children>
       </VBox>

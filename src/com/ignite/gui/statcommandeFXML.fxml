@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.ignite.controller.StatcommandeFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ignite.controller.StatcommandeFXMLController">
    <children>
       <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="583.0" prefWidth="1080.0">
          <children>
@@ -27,9 +26,9 @@
                         </Label>
                      </children>
                   </Pane>
-                  <JFXButton fx:id="Accueil" onAction="#ButtonAccuiel" prefHeight="67.0" prefWidth="199.0" text="Accueil" />
-                  <JFXButton fx:id="Commande" onAction="#ButtonCommande" prefHeight="67.0" prefWidth="199.0" text="Commande" />
-                  <JFXButton fx:id="Statistique" onAction="#ButtonStaistique" prefHeight="67.0" prefWidth="199.0" text="Statistique" />
+                  <JFXButton fx:id="Accueil" onAction="#ButtonAccuiel" prefHeight="67.0" prefWidth="199.0" text="Accueil" textFill="WHITE" />
+                  <JFXButton fx:id="Commande" onAction="#ButtonCommande" prefHeight="67.0" prefWidth="199.0" text="Commande" textFill="WHITE" />
+                  <JFXButton fx:id="Statistique" onAction="#ButtonStaistique" prefHeight="67.0" prefWidth="199.0" text="Statistique" textFill="WHITE" />
                </children>
             </VBox>
             <PieChart fx:id="piechart" layoutX="487.0" layoutY="348.0" prefHeight="234.0" prefWidth="313.0" />

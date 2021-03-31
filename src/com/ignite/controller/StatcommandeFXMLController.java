@@ -70,13 +70,13 @@ public class StatcommandeFXMLController implements Initializable {
            
             
             Statement stm =  DataBase.getInstance().getConnection().createStatement();
-               ResultSet rest=stm.executeQuery("select user , idproduit from commande");
+               ResultSet rest=stm.executeQuery("select prixtotale , idproduit from commande");
               
                while(rest.next())
                {
-                   libelle.add(rest.getString("user"));
+                   libelle.add(rest.getString("prixtotale"));
                    quantiteDispo.add(rest.getInt("idproduit"));
-                   stat.add(new PieChart.Data(rest.getString("user"), rest.getInt("idproduit")));
+                   stat.add(new PieChart.Data(rest.getString("prixtotale"), rest.getInt("idproduit")));
                }
     }
     catch (SQLException ex) {
@@ -104,7 +104,7 @@ public class StatcommandeFXMLController implements Initializable {
 
     @FXML
     private void ButtonCommande(ActionEvent event) throws IOException {
-                Ignite.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/com/ignite/gui/AjouterCommendeFXML.fxml"))));
+                Ignite.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/com/ignite/gui/AfficherCommandeFXML.fxml"))));
 
     }
 
