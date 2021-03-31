@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.sport.FXMLController">
+   <children>
+      <HBox alignment="TOP_CENTER" layoutX="166.0" layoutY="160.0" mouseTransparent="true" prefHeight="34.0" prefWidth="220.0">
+         <children>
+            <Label fx:id="Label_Min" prefHeight="17.0" prefWidth="88.0" text="30 :" />
+            <Label fx:id="Label_Sec" prefHeight="19.0" prefWidth="85.0" text="00 :" />
+            <Label fx:id="Label_MiliSec" text="00" />
+         </children>
+      </HBox>
+      <Button fx:id="BtnStart" layoutX="113.0" layoutY="243.0" mnemonicParsing="false" onAction="#ButtonStart" prefHeight="25.0" prefWidth="95.0" text="Start" />
+      <Button fx:id="BtnStop" layoutX="229.0" layoutY="243.0" mnemonicParsing="false" onAction="#ButtonStop" prefHeight="25.0" prefWidth="95.0" text="Stop" />
+      <Button fx:id="BtnResume" layoutX="349.0" layoutY="243.0" mnemonicParsing="false" onAction="#ButtonResume" prefHeight="25.0" prefWidth="95.0" text="Resume" />
+      <Button fx:id="BtnPause" layoutX="349.0" layoutY="243.0" mnemonicParsing="false" onAction="#ButtonPause" prefHeight="25.0" prefWidth="95.0" text="Pause" />
+      <Label contentDisplay="CENTER" layoutX="168.0" layoutY="41.0" text="Your Work Timer " textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Bauhaus 93" size="34.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
