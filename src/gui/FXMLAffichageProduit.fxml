@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="806.0" prefWidth="1438.0" stylesheets="@../style/bt.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FXMLAffichageProduitController">
+   <children>
+      <Pane layoutX="10.0" layoutY="22.0" prefHeight="710.0" prefWidth="306.0" style="-fx-background-color: grey;">
+         <children>
+            <TextField fx:id="tfRechereche" layoutX="11.0" layoutY="27.0" onAction="#rechercherProduit" prefHeight="55.0" prefWidth="283.0" promptText="chercher">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+            </TextField>
+            <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="12.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:C:/Users/Lenovo/Desktop/Yassine/PIDev/ignite/images/recherche.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="bAllCategories" layoutX="6.0" layoutY="148.0" mnemonicParsing="false" onAction="#selectAllCategories" prefHeight="79.0" prefWidth="296.0" text="All">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Label layoutX="5.0" layoutY="96.0" text="Categories :">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="bCategorieAcces" layoutX="7.0" layoutY="235.0" mnemonicParsing="false" onAction="#selectCategoriesAccesoires" prefHeight="79.0" prefWidth="296.0" text="Accessoires Fitness">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="bCategorieNutrition" layoutX="6.0" layoutY="321.0" mnemonicParsing="false" onAction="#selectCategorieNutrition" prefHeight="79.0" prefWidth="296.0" text="Nutrition sportive">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+            <Button fx:id="bCategorieMusc" layoutX="4.0" layoutY="406.0" mnemonicParsing="false" onAction="#selectCategorieMusc" prefHeight="79.0" prefWidth="296.0" text="Musculation">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Button>
+            <Button fx:id="bCategorieTraining" layoutX="5.0" layoutY="491.0" mnemonicParsing="false" onAction="#selectCategorieTraining" prefHeight="79.0" prefWidth="296.0" text="cross Training">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="329.0" layoutY="35.0" prefHeight="646.0" prefWidth="1091.0" style="-fx-background-color: grey;">
+         <children>
+            <Label fx:id="lTri" layoutX="66.0" layoutY="22.0" onMouseClicked="#tri" prefHeight="40.0" prefWidth="286.0" text="Trie par Prix ">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutX="14.0" layoutY="66.0" prefHeight="542.0" prefWidth="1028.0">
+               <content>
+                  <JFXMasonryPane fx:id="masPaneProduit" prefHeight="546.0" prefWidth="1010.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding></JFXMasonryPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Button layoutX="942.0" layoutY="693.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="238.0" text="ajouter au panier ">
+         <font>
+            <Font size="21.0" />
+         </font></Button>
+      <Button fx:id="bCatalogue" layoutX="662.0" layoutY="695.0" mnemonicParsing="false" onAction="#genererPDF" prefHeight="67.0" prefWidth="238.0" text="Telecharger Catalogue">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

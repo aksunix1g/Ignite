@@ -1,0 +1,70 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 31, 2021, 7:56:03 AM
+    Author     : Lenovo
+*/
+.button{
+    -fx-border-width: 0.5px;
+    -fx-border-color: #ACACAC;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-background-color: white;
+    -fx-font-size: 16px; 
+    -fx-padding: 8px 25px;
+    -fx-font-weight:700;
+    -fx-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+.button:hover{
+    -fx-background-color: #EA5444;
+    -fx-text-fill: white;
+
+}
+.button:focused{
+   -fx-border-width: 0.5px;
+    -fx-border-color: #ACACAC;
+   -fx-border-radius: 50px;
+/*    -fx-background-radius: 50px;
+    -fx-background-color: white;
+    -fx-font-size: 12px; 
+    -fx-padding: 8px 25px;
+    -fx-font-weight:700;
+    -fx-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;*/
+}
+.button:pressed{
+    -fx-background-color: #EA5444;
+    -fx-text-fill: white;
+}
+.Textfield{
+    fx-border-width: 0.5px;
+    -fx-border-color: #ACACAC;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-background-color: white;
+    -fx-font-size: 16px; 
+    -fx-padding: 8px 25px;
+    -fx-font-weight:700;
+    -fx-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    
+}
+#hl-database{
+    -fx-text-fill: white;
+}
+
+.hyperlink{
+    -fx-text-fill: blue;
+}
+.combo-box{
+    -fx-border-width: 0.5px;
+    -fx-border-color: #ACACAC;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-background-color: white;
+    -fx-font-size: 12px; 
+    -fx-padding: 0px;
+    -fx-font-weight:700;
+    -fx-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}

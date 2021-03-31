@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FXMLCrudProduitController">
+   <children>
+      <TabPane prefHeight="520.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Ajouter Produit">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="66.0" layoutY="43.0" text="Nom :" />
+                        <TextField fx:id="tfNomProduitAAjouter" layoutX="107.0" layoutY="39.0" />
+                        <Button fx:id="bSelectImageAAjouter" layoutX="374.0" layoutY="39.0" mnemonicParsing="false" onAction="#selectImageTabAjouter" text="Select Image" />
+                        <Label fx:id="lImageAAjouter" layoutX="400.0" layoutY="87.0" text="no image selected" textFill="RED" />
+                        <ComboBox fx:id="cbCategoriesAAjouter" layoutX="107.0" layoutY="74.0" prefWidth="150.0" promptText="Categories" />
+                        <Label layoutX="36.0" layoutY="78.0" text="Categories :" />
+                        <Label layoutX="71.0" layoutY="113.0" text="prix :" />
+                        <TextField fx:id="tfPrixAAjouter" layoutX="108.0" layoutY="109.0" />
+                        <TextField fx:id="tfQuantiteAAjouter" layoutX="108.0" layoutY="144.0" />
+                        <Label layoutX="46.0" layoutY="148.0" text="quantite :" />
+                        <Label layoutX="69.0" layoutY="186.0" text="Description :" />
+                        <TextArea fx:id="taDescriptionProduitAAjouter" layoutX="55.0" layoutY="207.0" prefHeight="111.0" prefWidth="509.0" />
+                        <Separator layoutX="307.0" layoutY="9.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <Button fx:id="bAjouterProduit" layoutX="248.0" layoutY="374.0" mnemonicParsing="false" onAction="#AjouterProduit" prefHeight="19.0" prefWidth="130.0" text="Ajouter" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Modifier Produit">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="57.0" layoutY="49.0" text="Nom :" />
+                        <TextField fx:id="tfNomProduitAModifier" layoutX="97.0" layoutY="45.0" />
+                        <Button fx:id="bSelectImageAModifier" layoutX="358.0" layoutY="100.0" mnemonicParsing="false" onAction="#selectImageTabModifier" text="Select Image" />
+                        <Label fx:id="lImageAModifier" layoutX="357.0" layoutY="150.0" text="no image selected" textFill="RED" />
+                        <ComboBox fx:id="cbCategoriesAModifier" layoutX="96.0" layoutY="76.0" prefWidth="150.0" promptText="Categories" />
+                        <Label layoutX="28.0" layoutY="80.0" text="Categories :" />
+                        <Label layoutX="65.0" layoutY="141.0" text="prix :" />
+                        <TextField fx:id="tfQuantiteAModifier" layoutX="96.0" layoutY="109.0" />
+                        <TextField fx:id="tfPrixAModifier" layoutX="95.0" layoutY="139.0" />
+                        <Label layoutX="41.0" layoutY="112.0" text="quantite :" />
+                        <Label layoutX="45.0" layoutY="177.0" text="Description :" />
+                        <TextArea fx:id="taDescriptionAModifier" layoutX="47.0" layoutY="196.0" prefHeight="111.0" prefWidth="509.0" stylesheets="@../style/darktheme.css" />
+                        <Separator layoutX="287.0" layoutY="43.0" orientation="VERTICAL" prefHeight="150.0" prefWidth="3.0" />
+                        <Button fx:id="bModifierProduit" layoutX="245.0" layoutY="326.0" mnemonicParsing="false" onAction="#modifierProduit" prefHeight="43.0" prefWidth="134.0" text="Modifier" />
+                        <Label layoutX="158.0" layoutY="14.0" text="Selectionner le produit a modifier :" />
+                        <ComboBox fx:id="cbListProduitAModifier" layoutX="357.0" layoutY="10.0" onAction="#produitSelectionneTabModifier" prefWidth="150.0" promptText="list Produits" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Supprimer Produit">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cbListProduitTabSupp" layoutX="273.0" layoutY="58.0" onAction="#produitSelectionneTabSupprimer" prefWidth="150.0" promptText="list produits" />
+                        <Label layoutX="67.0" layoutY="62.0" text="selectionner le produit a supprimer : " />
+                        <Button fx:id="bSupprimer" layoutX="238.0" layoutY="161.0" mnemonicParsing="false" onAction="#supprimerProduit" prefHeight="43.0" prefWidth="153.0" text="Supprimer " />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
